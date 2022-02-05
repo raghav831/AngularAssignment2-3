@@ -1,0 +1,119 @@
+[
+    {
+      "id": "1",
+      "courseCreator": "Steve",
+      "courseDescription": "This is a starter course for shield handling",
+      "discount": 10,
+      "discountValidTill": "2021-08-28T01:30:00.000Z",
+      "price": 10000,
+      "tags": ["world saving"],
+      "title": "shield"
+    },
+    {
+      "id": "2",
+
+      "courseCreator": "Loki",
+
+      "courseDescription": "TypeScript",
+
+      "discount": 7,
+
+      "discountValidTill": "2021-07-27T20:30:00.000Z",
+
+      "price": 1400,
+
+      "tags": ["mischief"],
+
+      "title": "Deep dive into typescript"
+    },
+
+    {
+      "id": "3",
+
+      "courseCreator": "Hardy",
+
+      "courseDescription": "Agular Course",
+
+      "discount": 8,
+
+      "discountValidTill": "2021-07-27T20:30:00.000Z",
+
+      "price": 1400,
+
+      "tags": ["Angular"],
+
+      "title": "How to learn Angular"
+    },
+
+    {
+      "id": "4",
+
+      "courseCreator": "Stephen",
+
+      "courseDescription": "Typescript Course",
+
+      "discount": 9,
+
+      "discountValidTill": "2021-07-27T20:30:00.000Z",
+
+      "price": 1400,
+
+      "tags": ["TypeScript"],
+
+      "title": "How to learn Typescript"
+    },
+
+    {
+      "id": "5",
+
+      "courseCreator": "Maximilian",
+
+      "courseDescription": "Angular Essentials",
+
+      "discount": 10,
+
+      "discountValidTill": "2021-07-27T20:30:00.000Z",
+
+      "price": 1400,
+
+      "tags": ["Angular"],
+
+      "title": "How to start angular"
+    },
+
+    {
+      "id": "6",
+
+      "courseCreator": "Harry",
+
+      "courseDescription": "Angular Crash Course",
+
+      "discount": 11,
+
+      "discountValidTill": "2021-07-27T20:30:00.000Z",
+
+      "price": 1400,
+
+      "tags": ["Angular"],
+
+      "title": "How to begin Angular"
+    },
+
+    {
+      "id": "7",
+
+      "courseCreator": "Maximilian",
+
+      "courseDescription": "Complete Angular Course",
+
+      "discount": 12,
+
+      "discountValidTill": "2021-07-27T20:30:00.000Z",
+
+      "price": 1400,
+
+      "tags": ["Angular"],
+
+      "title": "Deep dive into Angular"
+    }
+  ]

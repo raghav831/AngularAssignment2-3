@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="main-courses col-8">
+
+        <div class="courses">
+            <div class="allCourses">
+                <h6>WishList</h6>
+            </div>
+            <div class="filterCourses">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Course Price</option>
+                    <option value="1">Low to high</option>
+                    <option value="2">High to Low</option>
+                </select>
+            </div>
+
+        </div>
+        <app-wishlist-courses [courses]="CourseList"></app-wishlist-courses>
+    </div>
+
+    <div class=" cart col-4">
+        <div class="search">
+            <input type="text" placeholder="Search here.." name="search">
+            <button type="submit"><i class="fa fa-search"></i></button>
+        </div>
+        <app-cart [courses]="CourseList"></app-cart>
+    </div>
+</div>

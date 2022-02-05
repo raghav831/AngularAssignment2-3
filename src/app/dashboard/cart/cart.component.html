@@ -1,0 +1,40 @@
+<div class="main card shadow">
+
+  <div class="header card-header">
+    <h6>YOUR CART DETAILS</h6>
+  </div>
+  <div class="card-body course-cart-body">
+    <div class="cart-details">
+      <ul class="list-group">
+        <li class="list-group-item border-0 p-0">
+          <div *ngIf="totalCartPrice!=0;else other_content">
+            <div class="card course-cart-card mb-3 border-0" *ngFor="let item of CartItemstoDisplay">
+              <div class="border-line mt-2 mb-3"></div>
+              <div class="course-data">
+                <div class="square"></div>
+                <div class="course-name">
+                  <p>
+                    {{item.courseDescription}}
+                  </p>
+                </div>
+              </div>
+              <div class="course-price d-flex justify-content-end pb-2 mr-4">{{item.price}}</div>
+            </div>
+          </div>
+          <ng-template #other_content>
+            <h2> No Items in the cart</h2>
+          </ng-template>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="card-footer cart-footer p-3">
+    <div class="cart-value">
+      <p>Total Cart Value</p>
+      <p class="value font-weight-bold"> {{totalCartPrice}}</p>
+    </div>
+    <div class="checkout pt-3 ">
+      <button class="btn btn-primary btncolor" [disabled]="totalCartPrice === 0"> GO TO CHECKOUT</button>
+    </div>
+  </div>
+</div>

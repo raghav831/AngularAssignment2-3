@@ -1,0 +1,67 @@
+.main{
+    height: 550px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .border-line{
+    border: 1px solid rgb(141, 138, 138);
+    /* width: 100%; */
+  }
+  
+  .header{
+    margin: 10px auto;
+  }
+  
+  .cart-details{
+    height:  350px;
+    overflow: scroll;
+  }
+  
+  .square{
+    width:50px;
+    height: 50px;
+    background-color: #E0E0E0;
+    margin-left: 4px;
+    /* margin-left: 4px;
+    margin-top: 6px; */
+  }
+  .checkout{
+    color:#FF6738;
+  }
+  
+  .cart-footer{
+    display: flex;
+    justify-content: space-between;
+  
+  }
+  /* .course-cart-card{
+    height: 80px;
+    display: flex;
+  
+  } */
+  
+  .course-name p{
+    margin-top: 15px
+  }
+  
+  .course-name{
+    word-wrap: break-word;
+    width: 250px;
+  }
+  .course-data{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .card-footer, .card-header{
+    background-color: white;
+  }
+  .footer p{
+    margin:0;
+  }
+  .btncolor{
+    background-color:#FF6700;
+  }

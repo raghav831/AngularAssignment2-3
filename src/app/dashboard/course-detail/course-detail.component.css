@@ -1,0 +1,47 @@
+
+.container{
+    margin-top: 10px;
+    margin-left: -15px;
+    margin-right: 0px;
+  }
+  .allCourses{
+    margin-top:10px;
+    width: 110%;
+    padding-left: 150px;
+    height: 1%;
+  }
+
+  .btn-primary{
+      background-color: white;
+      margin-right: 30px;
+      color:black;
+  }
+  
+
+.course-details{
+    float: left;
+    background-color: black;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 130%;
+    height: 50%;
+    padding-left: 150px;
+    color:white;
+  }
+
+.course-description{
+    padding-left: 150px;
+}
+
+.video{
+    float: right;
+    margin-top: -200px;
+    margin-right: -150px;
+}
+
+.course-price{
+  margin-top: -200px;
+  margin-right: -150px;
+    float:right;
+}

@@ -1,0 +1,67 @@
+/* .searchCourses{
+    width: 20%;
+} */
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+  
+  }
+  .allCourses{
+    margin-top:2px;
+    padding-left: 10px;
+  }
+  
+  .courses{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .main-courses{
+    padding-left: 0px;
+  }
+  
+  .form-select{
+    font-size: 12px;
+    padding: 5px;
+  
+  }
+  
+  .cart{
+    padding-right: 0px;
+  }
+  
+  .search{
+    /* display: flex; */
+    margin-bottom: 12px;
+  
+  
+  }
+  input[type="text"]{
+    width:90%;
+    border-style: none;
+    background: #f1f1f1;
+    padding-left: 10px;
+  }
+  button{
+  
+    border-style: none;
+    background: #FF6700;
+    width: 10%;
+  
+  }
+  
+  i{
+    color: white;
+  }
+  
+  .form-control{
+    height: 25px;
+  }
+  
+  
+  @media(min-width: 576px){}

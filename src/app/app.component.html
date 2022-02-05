@@ -1,0 +1,27 @@
+<div class="navigationBar">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <img src="../assets/logo.png" class="logo" routerLink="">
+        <ul class="nav navbar-nav navbar-right mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link " routerLink="/dashboard" aria-current="page" href="#">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/wishlist">WishList</a>
+          </li>&nbsp;&nbsp;
+          <li class="nav-item iconinHeader">
+            <a class="bi bi-cart"></a>
+          </li>&nbsp;&nbsp;&nbsp;&nbsp;
+          <li class="nav-item iconinHeader">
+            <a class="bi bi-person" routerLink="/profile"></a>
+          </li>
+        </ul>
+    </div>
+  </nav>
+</div>
+<div class="banner">
+  <h6>Discover latest Courses on React</h6>
+</div>
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
