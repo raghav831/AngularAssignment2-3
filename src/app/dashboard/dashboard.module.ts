@@ -1,4 +1,4 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule,NO_ERRORS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CoursesComponent } from './courses/courses.component';
@@ -7,6 +7,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser'
 import { CourseDetailComponent } from './course-detail/course-detail.component';
 import { DiscountPipe } from '../discount.pipe';
+import { PaginationModule } from '../pagination/pagination.module';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { ValidityCheckPipe } from '../validity-check.pipe';
 
 @NgModule({
   declarations: [
@@ -14,17 +17,20 @@ import { DiscountPipe } from '../discount.pipe';
     CoursesComponent,
     CartComponent,
     CourseDetailComponent,
-    DiscountPipe
+    DiscountPipe,
+    CheckoutComponent,
   ],
   imports: [
     CommonModule,
     HttpClientModule,
     BrowserModule,
+    PaginationModule
     
   ],
-  exports:[CartComponent,DiscountPipe],
+  exports:[CartComponent,DiscountPipe,CoursesComponent],
   schemas: [
-    CUSTOM_ELEMENTS_SCHEMA
+    CUSTOM_ELEMENTS_SCHEMA,
+    NO_ERRORS_SCHEMA
   ],
 })
 export class DashboardModule { }

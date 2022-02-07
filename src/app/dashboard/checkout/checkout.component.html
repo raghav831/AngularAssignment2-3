@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="row align-items-start">
+        <div class="col-8 right-padding">
+            <div class="page-title-sorting">
+                <!-- <p>{{ cartCourseList.length }} Course in Cart</p> -->
+            </div>
+            <p>Courses in Cart</p>
+            <div class="courses" *ngFor="let item of CartItemstoDisplay">
+              <div class="course-card" attr.data-id="{{item.id}}">
+                  <div class="square"></div>
+                  <div class="title-container">
+                      <p class="title">{{item.title}}</p>
+                      <span class="author">{{item.courseCreator}}</span>
+                  </div>
+                  <div class="other-details">
+  
+                      <div class="vertically-center starIcon">
+                          <small> <a (click)="moveToWishList(item.id)">Move To WishList</a></small>
+                      </div>
+                      <div class="vertically-center">
+                          <p class="discount-price">Rs {{item.price | discount:item.discount}}/-</p>
+                      </div>
+                      <div class="vertically-center">
+                          <a class="bi bi-trash" (click)="deleteFromCart(item.id)"></a>
+                      </div>
+                      <div class="vertically-center">
+                          <a class="bi-chevron-right" (click)="GotoCourseDetails(item.id)"></a>
+                      </div>
+                  </div>
+              </div>
+          </div>
+            <div class="shadow p-3 mb-2 bg-body rounded">
+                <p>Recommended Courses</p>
+                <!-- <div *ngFor="let course of recommendedCourses" class="course-card"> -->
+                    <app-courses renderingPlace="recommend" [courses]="RecommendedCoursesList"></app-courses>
+                <!-- </div> -->
+            </div>
+        </div>
+  
+        <div class="col-4 left-padding">
+            <div class="shadow p-3 mt-5 mb-2 bg-body rounded">
+                <p class="total-title fs-6 fw-light">Total Amount</p>
+                <p class="total-price font-weight-bold ml-2">Rs {{ totalCartPrice }}/-</p>
+                <p class="your-saving" style="color:green"><small>You have saved Rs {{totalCartPriceOriginal}}/-</small></p><button class="btn btn-checkout"
+                    (click)="clickCheckOut(content)" [disabled]="CartItemstoDisplay.length === 0" >CHECKOUT</button>
+            </div>
+        </div>
+    </div>
+  </div>
+  <ng-template #content let-modal>
+    <div class="modal-header">
+      <div class="modal-title"></div>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>You have successfully placed your order&hellip;</p>
+    </div>
+    <div class="modal-footer border-0">
+      <button type="button" class="btn btn-light closeBtn" (click)="modal.close('Close click')">Ok</button>
+    </div>
+  </ng-template>

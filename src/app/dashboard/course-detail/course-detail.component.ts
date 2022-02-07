@@ -14,6 +14,7 @@ export class CourseDetailComponent implements OnInit {
   courses: courses[] = [];
   constructor(
     private route: ActivatedRoute,
+    private router:Router,
     private commonService: DashboardServiceService
   ) {}
   date = new Date();
@@ -30,6 +31,13 @@ export class CourseDetailComponent implements OnInit {
       });
     });
   }
-  addToWishlist(id: any) {}
-  addToCart(id: any) {}
+  addToWishlist(id: any) {
+   this.commonService.updateWishList(id);
+  }
+  addToCart(id: any) {
+    this.commonService.updateCart(id);
+  }
+  goToAllCourses(){
+  this.router.navigateByUrl("/dashboard");
+  }
 }

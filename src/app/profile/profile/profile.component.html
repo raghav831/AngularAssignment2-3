@@ -1,1 +1,160 @@
-<p>profile works!</p>
+
+<div class="container">
+    <div class="child-1 col-2 mt-4 border-0">
+        <img src="../../../assets/Person.png" class="image">
+    </div>
+  
+      <div class="child-2 mt-3 w-100">
+        <form class="card shadow ">
+            <div class="rowFlex">
+                <div class="col-12 ">
+                    <div class="form-group name col-md-4">
+                        <label for="exampleInputPassword1">Last Name</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1"
+                            placeholder="Enter Last Name">
+                    </div>
+                    <div class="form-group name col-md-4">
+                        <label for="exampleInputPassword1">First Name</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1"
+                            placeholder="Enter First Name">
+                    </div>
+                    <div class="form-group name col-md-4 pl-0">
+                        <label for="exampleInputEmail1">Display Name</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="Enter Display Name">
+                    </div>
+                    &nbsp; &nbsp; &nbsp;
+  
+                    <div class="form-group w-50">
+                        <label for="exampleFormControlTextarea1">About yourself</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <div class="checkBox">
+                        <small id="emailHelp" class="form-text text-muted">Your Area of Interest</small>
+                        <div class="form-check interest">
+                            <input type="checkbox" class="form-check-input" id="check1" name="option1" value="Designer"
+                                >
+                            <label class="form-check-label" for="check1">Designer</label>
+                        </div>
+                        <div class="form-check interest">
+                            <input type="checkbox" class="form-check-input" id="check2" name="option2"
+                                value="Developer" checked>
+                            <label class="form-check-label" for="check2">Developer</label>
+                        </div>
+                        <div class="form-check interest">
+                            <input type="checkbox" class="form-check-input" id="check1" name="option3"
+                                value="ProjectManager">
+                            <label class="form-check-label" for="check1">Project Manager</label>
+                        </div>
+                        <div class="form-check interest">
+                            <input type="checkbox" class="form-check-input" id="check2" name="option4" value="Sales">
+                            <label class="form-check-label" for="check2">Sales</label>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="radioButton">
+                        <small id="emailHelp" class="form-text text-muted">Are you a Student or Professional?</small>
+                        <div class="form-check interest">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1"
+                                value="option1" (change)=onChangeHandler($event) checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                Student
+                            </label>
+                        </div>
+                        <div  class="form-check interest">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2"
+                                value="option2" (change)=onChangeHandler($event)>
+                            <label class="form-check-label" for="exampleRadios2">
+                                Professional
+                            </label>
+                        </div>
+                    </div>
+                    <br>
+                <div class="professionalDetails" *ngIf="experience === 'option2'">
+                  <div class="box border p-2" style="border-color: #E0E0E0;" >
+                    <div class="radibuttonInline">
+                        <div class="profileexperience">
+                            <small id="radioHelp" class="form-text text-muted">How much of experience you have?</small>
+                            <div class="form-check col-md-4 experience">
+                                <input class="form-check-input" type="radio" name="radibuttonInline1"
+                                    id="radibuttonInline2" value="option2">
+                                <label class="form-check-label" for="radibuttonInline2">
+                                    10 & above
+                                </label>
+                            </div>
+                            <div class="form-check col-md-4 experience">
+                                <input class="form-check-input" type="radio" name="radibuttonInline1"
+                                    id="radibuttonInline2" value="option2">
+                                <label class="form-check-label" for="radibuttonInline2">
+                                    5-10
+                                </label>
+                            </div>
+                            <div class="form-check col-md-4 experience">
+  
+                                <input class="form-check-input" type="radio" name="radibuttonInline1"
+                                    id="radibuttonInline1" value="option1" checked>
+                                <label class="form-check-label" for="radibuttonInline1">
+                                    0-5
+                                </label>
+                            </div>
+                        </div>
+                        &nbsp; &nbsp; &nbsp;
+                        <br>
+                        <div class="expertise">
+                            <small id="radioHelp" class="form-text text-muted">What is your Expertise?</small>
+                            <div class="form-check col-md-4 experience">
+                                <input class="form-check-input" type="radio" name="radibuttonInline"
+                                    id="radibuttonInline1" value="option1" checked>
+                                <label class="form-check-label" for="radibuttonInline1">
+                                    Java
+                                </label>
+                            </div>
+                            <div class="form-check col-md-4 experience">
+                                <input class="form-check-input" type="radio" name="radibuttonInline"
+                                    id="radibuttonInline2" value="option2">
+                                <label class="form-check-label" for="radibuttonInline2">
+                                    React
+                                </label>
+                            </div>
+                            <div class="form-check col-md-4 experience">
+                                <input class="form-check-input" type="radio" name="radibuttonInline"
+                                    id="radibuttonInline2" value="option2">
+                                <label class="form-check-label" for="radibuttonInline2">
+                                    Backend
+                                </label>
+                            </div>
+                        </div>
+                        &nbsp;
+                    </div>
+                    <div class="mentionRole">
+                        <div class="form-group w-25">
+                            <label class="mentionRole" for="exampleInputPassword1"><small>Mention your role:</small></label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                placeholder="Add text">
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer pb-1 border-0" style="background-color: white;">
+  
+              <button type="submit" class="btn save mt-3" (click) = "openVerticallyCentered(content, $event)">Save</button>
+            </div>
+        </form>
+      </div>
+  </div>
+  <ng-template #content let-modal>
+    <div class="modal-header">
+      <div class="modal-title"></div>
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>Your profile is saved..!</p>
+    </div>
+    <div class="modal-footer border-0">
+      <button type="button" class="btn btn-light closeBtn" (click)="modal.close('Close click')">Ok</button>
+    </div>
+  </ng-template>

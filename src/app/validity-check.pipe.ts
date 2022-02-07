@@ -1,3 +1,4 @@
+import { ConsoleLogger } from '@angular/compiler-cli/private/localize';
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
@@ -5,11 +6,11 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class ValidityCheckPipe implements PipeTransform {
 
-  transform(date:Date): Date {
-    var today = new Date;
-
-    // return date-today;
-    return date;
+  transform(value: any, args?: any): any {
+      if (value) {
+          console.log(value);
+      }
+      return value;
   }
 
 }

@@ -1,4 +1,4 @@
-import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule,NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -7,12 +7,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { DashboardModule } from './dashboard/dashboard.module';
 import { WishlistModule } from './wishlist/wishlist.module';
 import { ValidityCheckPipe } from './validity-check.pipe';
-import { DiscountPipe } from './discount.pipe';
-
 @NgModule({
   declarations: [
     AppComponent,
-    ValidityCheckPipe,
   ],
   imports: [
     BrowserModule,
@@ -24,6 +21,6 @@ import { DiscountPipe } from './discount.pipe';
   exports:[],
   providers: [],
   bootstrap: [AppComponent],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA,NO_ERRORS_SCHEMA ]
 })
 export class AppModule { }

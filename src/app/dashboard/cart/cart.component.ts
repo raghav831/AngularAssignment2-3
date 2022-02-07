@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { courses } from '../courses';
 import { DashboardServiceService } from '../dashboard-service.service';
 
@@ -8,7 +9,7 @@ import { DashboardServiceService } from '../dashboard-service.service';
   styleUrls: ['./cart.component.css'],
 })
 export class CartComponent implements OnInit {
-  constructor(private commonService: DashboardServiceService) {}
+  constructor(private commonService: DashboardServiceService,private router:Router) {}
 
   cartItems: any = [];
   @Input() courses: courses[] = [];
@@ -27,8 +28,11 @@ export class CartComponent implements OnInit {
     this.courses.filter((item) => {
       if (this.cartItems.includes(item.id)) {
         this.CartItemstoDisplay.push(item);
-        this.totalCartPrice += item.price;
+        this.totalCartPrice += (item.price-(item.price*item.discount)/100);
       }
     });
+  }
+  navigateToCheckout(){
+    this.router.navigateByUrl("/checkout");
   }
 }

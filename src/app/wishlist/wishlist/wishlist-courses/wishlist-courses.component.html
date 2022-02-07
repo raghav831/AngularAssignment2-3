@@ -1,28 +1,32 @@
-<div class="courses" *ngFor="let item of wishListToDisplay">
-    <div class="course-card" attr.data-id="{{item.id}}">
-        <div class="square"></div>
-        <div class="title-container">
-            <p class="title">{{item.title}}</p>
-            <span class="badge badge-color" *ngFor="let tag of item.tags">{{tag}}</span>
-        </div>
-        <div class="other-details">
-            <div class="vertically-center">
-                <p class="author">{{item.courseCreator}}</p>
+<div *ngIf="wishListToDisplay.length!=0; else otherContent">
+    <div class="courses" *ngFor="let item of wishListToDisplay">
+        <div class="course-card" attr.data-id="{{item.id}}">
+            <div class="square"></div>
+            <div class="title-container">
+                <p class="title">{{item.title}}</p>
+                <span class="badge badge-color" *ngFor="let tag of item.tags">{{tag}}</span>
             </div>
-            <div class="vertically-center">
-                <button class="btn btn-primary-common btnclass" (click)="updateCartFromWishList(item.id)">ADD TO
-                    CART</button>
-            </div>
-            <div class="vertically-center">
-                <!-- <p class="discount-price">{{item.price | discount:item.discount}}/-</p> -->
-                <p class="discount-price">{{item.price}}/-</p>
-            </div>
-            <div class="vertically-center">
-                <p class="original-price">{{item.price | discount:item.discount}}/-</p>
-            </div>
-            <div class="vertically-center">
-                <a class="bi bi-trash" (click)="deleteFromWishList(item.id)"></a>
+            <div class="other-details">
+                <div class="vertically-center">
+                    <p class="author">{{item.courseCreator}}</p>
+                </div>
+                <div class="vertically-center">
+                    <button class="btn btn-primary-common btnclass" (click)="updateCartFromWishList(item.id)">ADD TO
+                        CART</button>
+                </div>
+                <div class="vertically-center">
+                    <p class="discount-price">{{item.price}}/-</p>
+                </div>
+                <div class="vertically-center">
+                    <p class="original-price">{{item.price | discount:item.discount}}/-</p>
+                </div>
+                <div class="vertically-center">
+                    <a class="bi bi-trash" (click)="deleteFromWishList(item.id)"></a>
+                </div>
             </div>
         </div>
     </div>
 </div>
+<ng-template #otherContent>
+    <h2> No Items in the WishList</h2>
+</ng-template>

@@ -10,7 +10,8 @@ import { DashboardServiceService } from '../dashboard-service.service';
 })
 export class CoursesComponent implements OnInit {
   showStar: any;
-  show=true;
+  show = true;
+  pageFrom:any;
   @Input() courses: courses[] = [];
   constructor(
     private CommonService: DashboardServiceService,
@@ -18,11 +19,10 @@ export class CoursesComponent implements OnInit {
   ) {}
   ngOnInit(): void {
     this.showStar = this.CommonService.showStar;
-
+    this.pageFrom = this.CommonService.pageFrom;
   }
   ngDoCheck() {
     this.ngOnInit();
-
   }
   addToCart(id: any) {
     this.CommonService.updateCart(id);
@@ -34,8 +34,5 @@ export class CoursesComponent implements OnInit {
   }
   GotoCourseDetails(id: any) {
     this.router.navigateByUrl('/courseDetail/' + id);
-  }
-  closeModel(){
-
   }
 }

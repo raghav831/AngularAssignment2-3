@@ -34,6 +34,8 @@ export class WishlistCoursesComponent implements OnInit {
     this.showStar[id] = !this.showStar[id];
   }
   updateCartFromWishList(id: any) {
+    this.showStar = this.commonService.showStar;
+    this.showStar[id] = !this.showStar[id];
     this.commonService.updateCartFromWhisList(id);
   }
 }

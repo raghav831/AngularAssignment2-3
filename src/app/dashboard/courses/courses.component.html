@@ -15,12 +15,12 @@
             </div>
             <div class="vertically-center">
                 <!-- <p class="discount-price">{{item.price | discount:item.discount}}/-</p> -->
-                <p class="discount-price">{{item.price}}/-</p>
+                <p class="discount-price">Rs {{item.price | discount:item.discount}}/-</p>
             </div>
             <div class="vertically-center">
-                <p class="original-price">{{item.price | discount:item.discount}}/-</p>
+                <p class="original-price">Rs {{item.price}}/-</p>
             </div>
-            <div class="vertically-center">
+            <div class="vertically-center"> 
                 <button class="btn btn-primary-common btnclass" (click)="addToCart(item.id)">ADD TO CART</button>
             </div>
             <div class="vertically-center">

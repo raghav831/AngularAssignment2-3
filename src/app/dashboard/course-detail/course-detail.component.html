@@ -2,9 +2,7 @@
     <div class="container">
 
         <div class="allCourses">
-            <a>All Courses > {{ item.id}}</a>
-            <br>
-            <h6>Title : {{item.title}}</h6>
+            <a (click)="goToAllCourses()" style="color: blue;"> All Courses</a> <span> > </span> <a>{{item.title}}</a>
         </div>
         <div class="course-details">
             <div class="sd">
@@ -18,7 +16,7 @@
             </div>
         </div>
         <div class="video">
-            <iframe width="390" height="315" src="https://www.youtube.com/embed?v=kuJNVKHHpGk&feature=youtu.be">
+            <iframe poster="react.png" width="390" height="315" src="https://www.youtube.com/embed?v=kuJNVKHHpGk&feature=youtu.be">
             </iframe>
         </div>
         <div class="course-description col-8">
@@ -44,10 +42,8 @@
             <br />
             Price Rs - {{item.price}}
             <br />
-            Discount time left {{item.discountValidTill }}
+            Discount time left {{item.discountValidTill}}
             <br />
-            <!-- <a class="btn btn-primary"> Add to Wishlist</a> &nbsp;&nbsp;&nbsp;
-            <a class="btn btn-primary"> Add to Cart</a> -->
 
             <a  class="btn btn-primary" (click)="addToWishlist(item.id)"> Add to Wishlist</a> &nbsp;&nbsp;&nbsp;
         <a  class="btn btn-primary" (click)="addToCart(item.id)"> Add to Cart</a>

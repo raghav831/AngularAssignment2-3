@@ -9,6 +9,7 @@ import { DashboardServiceService } from 'src/app/dashboard/dashboard-service.ser
 })
 export class WishlistComponent implements OnInit {
   CourseList: courses[] = [];
+  isWishListEmpty=false;
   constructor(private commonService: DashboardServiceService) {}
   ngOnInit(): void {
     this.getCourses();
